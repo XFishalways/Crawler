@@ -7,7 +7,20 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 
+import csv
+
 
 class FictionruaerPipeline:
+    def __init__(self):
+        self.f = open('ao3_demo.csv', 'w', encoding='utf-8', newline='')
+        self.file_name = ['fandomAM_Name']
+        self.writer = csv.DictWriter(self.f, fieldnames=self.file_name)
+        self.writer.writeheader()
+
     def process_item(self, item, spider):
+        self.writer.writerow(dict(item))
+        print(item)
         return item
+
+    def close_spider(self, spider):
+        self.f.close()
