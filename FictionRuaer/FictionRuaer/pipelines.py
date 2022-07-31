@@ -12,8 +12,8 @@ import csv
 
 class FictionruaerPipeline:
     def __init__(self):
-        self.f = open('../Resource/FandomAM_Name.csv', 'w', encoding='utf-8', newline='')
-        self.file_name = ['fandomAM_Name']
+        self.f = open('../Resource/Fandom/FandomAM_Name.csv', 'w', encoding='utf-8', newline='')
+        self.file_name = ['fandomAMName']
         self.writer = csv.DictWriter(self.f, fieldnames=self.file_name)
         self.writer.writeheader()
 

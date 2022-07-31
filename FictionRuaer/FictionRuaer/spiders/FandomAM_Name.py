@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author  : XFishalways
+# @Time    : 2022/7/30 8:00 PM
+# @Function: Get all fandoms' name from 'Anime & Manga'
+
 from ..items import FictionruaerItem
 
 import scrapy
@@ -12,9 +17,9 @@ class FandomAM_NameSpider(scrapy.Spider):
         liList = response.xpath('//li[@class="letter listbox group"]/ul[@class="tags index group"]')
 
         for li in liList:
-            fandomAM_NameList = li.xpath("./child::li/a/text()").extract()
+            fandomAMNameList = li.xpath("./child::li/a/text()").extract()
 
-            for fandomAM_Name in fandomAM_NameList:
-                item = FictionruaerItem(fandomAM_Name=fandomAM_Name)
+            for fandomAMName in fandomAMNameList:
+                item = FictionruaerItem(fandomAMName=fandomAMName)
 
                 yield item
