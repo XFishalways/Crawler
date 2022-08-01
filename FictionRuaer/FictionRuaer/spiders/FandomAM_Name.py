@@ -17,7 +17,7 @@ class FandomAM_NameSpider(scrapy.Spider):
         liList = response.xpath('//li[@class="letter listbox group"]/ul[@class="tags index group"]')
 
         for li in liList:
-            fandomAMNameList = li.xpath("./child::li/a/text()").extract()
+            fandomAMNameList = li.xpath('./child::li/a/text()').extract()
 
             for fandomAMName in fandomAMNameList:
                 item = FictionruaerItem(fandomAMName=fandomAMName)

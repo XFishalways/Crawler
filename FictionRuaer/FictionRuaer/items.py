@@ -10,10 +10,10 @@ class FictionruaerItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
 
-    # being created for FandomAM_Name.py
+    # created for FandomAM_Name
     fandomAMName = scrapy.Field()
 
-    # being created for Work.py
+    # created for Work
     fictionRating = scrapy.Field()
     fictionArchiveWarning = scrapy.Field()
     fictionCategories = scrapy.Field()

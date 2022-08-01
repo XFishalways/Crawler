@@ -6,3 +6,4 @@
 from scrapy import cmdline
 
 cmdline.execute('scrapy crawl FandomAM_Name'.split())
+cmdline.execute('scrapy crawl Work'.split())
