@@ -13,11 +13,15 @@ class FictionruaerItem(scrapy.Item):
     # created for FandomAM_Name
     fandomAMName = scrapy.Field()
 
-    # created for Work
+    # created for Work's parse function
+    fictionSearchName = scrapy.Field()  # 搜索页面标题
+    fictionSearchSummary = scrapy.Field()  # 搜索页面文章简介
+
+    # created for Work's article_parse function
     fictionRating = scrapy.Field()
     fictionArchiveWarning = scrapy.Field()
     fictionCategories = scrapy.Field()
-    fictionName = scrapy.Field()
+    fictionContentName = scrapy.Field()  # 文章页面标题
     fictionLanguage = scrapy.Field()
     fictionPublishDate = scrapy.Field()
     fictionWords = scrapy.Field()

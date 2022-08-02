@@ -63,7 +63,8 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'FictionRuaer.pipelines.FictionruaerPipeline': 300,
+    'FictionRuaer.pipelines.FandomAMNamePipeline': 500,
+    'FictionRuaer.pipelines.WorkPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

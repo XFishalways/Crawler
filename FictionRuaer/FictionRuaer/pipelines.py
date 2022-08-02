@@ -10,7 +10,7 @@ from itemadapter import ItemAdapter
 import csv
 
 
-class FictionruaerPipeline:
+class FandomAMNamePipeline:
     def __init__(self):
         self.f = open('../Resource/Fandom/FandomAM_Name.csv', 'w', encoding='utf-8', newline='')
         self.file_name = ['fandomAMName']
@@ -24,3 +24,14 @@ class FictionruaerPipeline:
 
     def close_spider(self, spider):
         self.f.close()
+
+
+class WorkPipeline:
+    def __init__(self):
+        return
+
+    def process_item(self, item, spider):
+        pass
+
+    def close_spider(self, spider):
+        return
